@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css"></link>
+<script language="javascript" type="text/javascript" src="jquery-2.1.1.js"></script>
+<script language="javascript" type="text/javascript" src="show.js"></script>
+<script language="javascript" type="text/javascript" src="jit.js"></script>
+<script language="javascript" type="text/javascript" src="graph.js"></script>
+<title>JavaScript InfoVis</title>
+</head>
+<body onload="display('null');"> 
+<!-- <body onload="init('full');">-->
+<div id="htmlbody" class="htmlbody">
+<div id="header" class="header">
+<div id="title" class="title">Cassandra Configuration</div>
+<div class="navigate">
+<div class="nav" ><a href="index.html">Configs</a></div>
+<div class="nav" ><a href="codesview.html">Codes</a></div>
+</div>
+</div>
+<div id="seperator" class="seperator"></div>
+<div id="continue" class="continue">
+
+</div>
+<div id="content" class="content">
+<div id="configcont" class="configcont">
+<div class="codestt" onclick="redir()">Configurations</div>
+<ul id="grouplist" class="grouplist" >
+<li class="groupname"><a class="agroup" href="javascript:getConfigname('cconf','related')">Connected Program Configurations</a>
+<div id="cconf" style="display:none">
+
+<ul id="relatedulcname" class="uclnameinfo">
+<li id="cfk" class="sort" onclick="getConfigname('S','related')">GroupSort</li>
+<li id="relatedcname">
+<div class="configname" id="relatedname" onclick="isHidden(id)"></div>
+<div class="cfbasic" style="display:none">
+<div class="configbasicinfo" id="relatedtype"></div>
+<div class="configbasicinfo" id="relateddescriptor"></div>
+<div class="configbasicinfo" id="relatedmethod"></div>
+<div class="configbasicinfo" id="relatedyaml"></div>
+<div class="configbasicinfo" id="relatedyamlcomment"></div>
+<div class="configbasicinfo" id="relateddefault"></div>
+<div class="configbasicinfolink" id="nodecall" onclick="callgraph(id)">CallGraph</div>
+<div class="configbasicinfolink" id="nodename" onclick="init(id)">Relation Map</div>
+<div class="configbasicinfolink" id="groupname" onclick="init(id)">Group</div>
+
+</div>
+</li></ul>
+</div>
+</li>
+<li class="groupname"><a class="agroup" href="javascript:getConfigname('iconf','isolated')">Non-Connected Program Configurations</a>
+<div id="iconf" style="display:none">
+<ul id="isolatedulcname" class="uclnameinfo"><li id="isolatedcname">
+<div class="configname" id="isolatedname" onclick="isHidden(id)"></div>
+<div class="cfbasic" style="display:none">
+<div class="configbasicinfo" id="isolatedtype"></div>
+<div class="configbasicinfo" id="isolateddescriptor"></div>
+<div class="configbasicinfo" id="isolatedmethod"></div>
+<div class="configbasicinfo" id="isolatedyaml"></div>
+<div class="configbasicinfo" id="isolatedyamlcomment"></div>
+<div class="configbasicinfo" id="isolateddefault"></div>
+<div class="configbasicinfolink" id="nodecall" onclick="callgraph(id)">CallGraph</div>
+<div class="configbasicinfolink" id="nodename" onclick="igraph(id)">Node Map</div>
+</div>
+</li></ul>
+</div>
+</li>
+<li class="groupname"><a class="agroup" href="javascript:getConfigname('sconf','system')">System Configurations</a>
+<div id="sconf" style="display:none">
+<ul id="systemulcname" class="uclnameinfo"><li id="systemcname">
+<div class="configname" id="systemname" onclick="isHidden(id)"></div>
+<div class="cfbasic" style="display:none">
+<div class="configbasicinfo" id="systemtype"></div>
+<div class="configbasicinfo" id="systemdescriptor"></div>
+<div class="configbasicinfo" id="systemmethod"></div>
+<div class="configbasicinfo" id="systemyaml"></div>
+<div class="configbasicinfo" id="systemyamlcomment"></div>
+<div class="configbasicinfo" id="systemdefault"></div>
+</div>
+</li></ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="javainfovis" class="javainfovis">
+<div id="container" class="container">
+<div id="center-container" class="center-container">
+    <div id="infovis"> </div>    
+</div>
+<div id="log" class="log"></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

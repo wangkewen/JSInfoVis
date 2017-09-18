@@ -1,0 +1,2 @@
+native_transport_max_threads Integer getNativeTransportMaxThreads true true true 128 javafiles:/src/java/org/apache/cassandra/transport/RequestThreadPoolExecutor.java#42
+permissions_validity_in_ms int getPermissionsValidity true true false 2000 javafiles:/src/java/org/apache/cassandra/service/ClientState.java#324#329#330

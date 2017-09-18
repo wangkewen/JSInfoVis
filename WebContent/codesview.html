@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css"></link>
+<script language="javascript" type="text/javascript" src="jquery-2.1.1.js"></script>
+<script language="javascript" type="text/javascript" src="show.js"></script>
+<script language="javascript" type="text/javascript" src="jit.js"></script>
+<script language="javascript" type="text/javascript" src="graph.js"></script>
+<title>JavaScript InfoVis</title>
+</head>
+<body onload="spaceTreeInit(true);">
+<div id="htmlbody" class="htmlbody">
+<div id="header" class="header">
+<div id="title" class="title">Cassandra Configuration</div>
+<div class="navigate">
+<div class="nav" ><a href="index.html">Configs</a></div>
+<div class="nav" ><a href="codesview.html">Codes</a></div>
+</div>
+</div>
+<div id="seperator" class="seperator"></div>
+<div id="continue" class="continue"></div>
+<div id="content" class="content">
+<div>
+</div>
+<div id="codes" class="codes" >
+<div class="codestt" onclick="redir()">Source codes</div>
+<ul id="grouplist" class="grouplist" >
+<li class="groupname" id="groupfolder">
+<div id="folder">
+<a id="groupfoldername" class="agroup" onclick="getCodeslist(id,'ccode_'+id)">
+<img class="imgl" id="img" ></img>
+<span class="cfcc" id="foldername"></span></a>
+<div id="ccode" class="cclist" style="display:none">
+<ul class="uclnameinfo" id="codeulcname">
+<li id="codecname">
+<div class="codename" id="codefile" onclick="iscHidden(id)">
+<img class="imgl" id="imgl" ></img>
+<span  class="cfcc" id="codefilename"></span>
+</div>
+<div class="codebasic" style="display:none">
+<div class="codebasicinfo" id="codelocat" onclick="showcodes(id)">Codes File</div>
+<div class="codebasicinfoconf" id="nodename" onclick="init(id)"></div>
+</div>
+<!-- sub-folder -->
+<ul class="uclnameinfo" id="subcodeulcname" style="display:none">
+<li id="subcodecname">
+<div class="codename" id="subcodefile" onclick="iscHidden(id)">
+<img class="imgl" id="subimgl" ></img>
+<span  class="cfcc" id="subcodefilename"></span>
+</div>
+<div class="codebasic" style="display:none">
+<div class="codebasicinfo" id="subcodelocat" onclick="showcodes(id)">Codes File</div>
+<div class="codebasicinfoconf" id="subnodename" onclick="init(id)"></div>
+</div>
+</li>
+</ul>
+<!-- sub-folder-End -->
+</li></ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="javainfovis" class="javainfovis">
+<div id="container" class="container">
+<div id="center-container" class="center-container">
+    <div id="infovis"> </div>    
+</div>
+<div id="log" class="log"></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
